@@ -1,0 +1,73 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #333;
+}
+.navbar li a:not(:first-of-type) {
+  text-align: center;
+}
+.navbar li a {
+  text-decoration: none;
+  padding: 1em 1.5em;
+  display: block;
+  color: #222;
+  /*text-align: center;*/
+}
+.navbar li:first-child {
+  width: calc(96px + 3em);
+}
+.navbar li:first-child a {
+  position: relative;
+  width: 96px;
+  height: 1em;
+  /*text-align: left;*/
+}
+.navbar {
+  background-color: #f7aa74;
+  display: table;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2em;
+}
+.navbar li:first-child img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.navbar ul {
+  display: table-row;
+}
+.navbar li {
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 1px solid #333;
+}
+.navbar li:last-child img {
+  height: 1em; /*facem img de marimea textului*/
+}
+.navbar li:last-child {
+  display: none;
+}
+/*adaptive for small screens*/
+
+@media (max-width: 1300px) {
+  .navbar li:nth-child(2),
+  .navbar li:nth-child(3),
+  .navbar li:nth-child(4) {
+    display: none;
+  }
+  .navbar li:last-child {
+    display: table-cell;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar li:first-child {
+    width: calc(32px + 3em);
+  }
+  .navbar li:first-child a {
+    width: 32px;
+    height: 1em;
+    text-align: left;
+  }
+}
